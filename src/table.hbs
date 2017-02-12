@@ -1,0 +1,24 @@
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+    <thead>
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric">Material</th>
+        <th>Quantity</th>
+        <th>Unit price</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <th class="mdl-data-table__cell--non-numeric">합계</th>
+        <td colspan="2" class="totalPrice"></td>
+    </tr>
+    </tfoot>
+    <tbody>
+    {{#each table}}
+    <tr>
+        <td class="mdl-data-table__cell--non-numeric">{{name}}</td>
+        <td>{{quantity}}</td>
+        <td>{{price}}</td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>

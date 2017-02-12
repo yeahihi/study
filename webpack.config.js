@@ -6,6 +6,19 @@ module.exports = {
     output: {
         filename: 'bundle.js'
     },
+    module :{
+        loaders : [{
+            test : /\.hbs$/, // 모든 js 파일을 뒤지겠다는 의미, 정규식
+            loader : 'handlebars-loader'
+        }, {
+            test :/\.js$/,
+            loader : 'babel-loader',
+            exclude : /node_modules/,
+            query : {
+                presets : ['es2015']
+            }// 옵션
+        }] // 여러개의 로더를 로딩할 수 있음.
+    },
     devServer : {
         inline : true,
         port : 7777,
