@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 26);
+/******/ 	return __webpack_require__(__webpack_require__.s = 25);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -261,7 +261,7 @@ module.exports = exports['default'];
 
 // Create a simple path alias to allow browserify to resolve
 // the runtime on a supported path.
-module.exports = __webpack_require__(10)['default'];
+module.exports = __webpack_require__(9)['default'];
 
 
 /***/ }),
@@ -283,11 +283,11 @@ var _exception = __webpack_require__(1);
 
 var _exception2 = _interopRequireDefault(_exception);
 
-var _helpers = __webpack_require__(13);
+var _helpers = __webpack_require__(12);
 
-var _decorators = __webpack_require__(11);
+var _decorators = __webpack_require__(10);
 
-var _logger = __webpack_require__(21);
+var _logger = __webpack_require__(20);
 
 var _logger2 = _interopRequireDefault(_logger);
 
@@ -379,19 +379,6 @@ exports.logger = _logger2['default'];
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = function () {};
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
 var Handlebars = __webpack_require__(2);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
@@ -409,7 +396,7 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
 },"useData":true});
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Handlebars = __webpack_require__(2);
@@ -418,36 +405,36 @@ module.exports = (Handlebars["default"] || Handlebars).template({"compiler":[7,"
     var stack1;
 
   return "<div class=\"demo-layout-transparent mdl-layout mdl-js-layout\">\r\n"
-    + ((stack1 = container.invokePartial(__webpack_require__(9),depth0,{"name":"header","data":data,"indent":"    ","helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
-    + "    <div class=\"mdl-layout__drawer\">\r\n        <span class=\"mdl-layout-title\">Title</span>\r\n        <nav class=\"mdl-navigation\" data-view=\"list\">\r\n        </nav>\r\n    </div>\r\n    <main class=\"mdl-layout__content\">\r\n        <button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent\">\r\n            Button\r\n        </button>\r\n    </main>\r\n</div>";
+    + ((stack1 = container.invokePartial(__webpack_require__(8),depth0,{"name":"header","data":data,"indent":"    ","helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
+    + "    <div class=\"mdl-layout__drawer\">\r\n        <span class=\"mdl-layout-title\">Title</span>\r\n        <nav class=\"mdl-navigation\" data-view=\"list\">\r\n        </nav>\r\n    </div>\r\n    <main class=\"mdl-layout__content\">\r\n        <div class=\"index\">\r\n            <p>과제 버튼을 클릭하셔서 보세요.</p>\r\n        </div>\r\n        <div class=\"hw1\">\r\n            <button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent\">\r\n                Button\r\n            </button>\r\n            <div class=\"tableWrap\"></div>\r\n        </div>\r\n    </main>\r\n</div>";
 },"usePartial":true,"useData":true});
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Handlebars = __webpack_require__(2);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
-    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
+    var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
   return "    <tr>\r\n        <td class=\"mdl-data-table__cell--non-numeric\">"
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.fruit : depth0)) != null ? stack1.name : stack1), depth0))
+    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
     + "</td>\r\n        <td>"
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.fruit : depth0)) != null ? stack1.quantity : stack1), depth0))
+    + alias4(((helper = (helper = helpers.quantity || (depth0 != null ? depth0.quantity : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"quantity","hash":{},"data":data}) : helper)))
     + "</td>\r\n        <td>"
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.fruit : depth0)) != null ? stack1.price : stack1), depth0))
+    + alias4(((helper = (helper = helpers.price || (depth0 != null ? depth0.price : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"price","hash":{},"data":data}) : helper)))
     + "</td>\r\n    </tr>\r\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1;
 
-  return "<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\r\n    <thead>\r\n    <tr>\r\n        <th class=\"mdl-data-table__cell--non-numeric\">Material</th>\r\n        <th>Quantity</th>\r\n        <th>Unit price</th>\r\n    </tr>\r\n    </thead>\r\n    <tfoot>\r\n    <tr>\r\n        <th class=\"mdl-data-table__cell--non-numeric\">합계</th>\r\n        <td colspan=\"2\"></td>\r\n    </tr>\r\n    </tfoot>\r\n    <tbody>\r\n"
+  return "<table class=\"mdl-data-table mdl-js-data-table mdl-shadow--2dp\">\r\n    <thead>\r\n    <tr>\r\n        <th class=\"mdl-data-table__cell--non-numeric\">Material</th>\r\n        <th>Quantity</th>\r\n        <th>Unit price</th>\r\n    </tr>\r\n    </thead>\r\n    <tfoot>\r\n    <tr>\r\n        <th class=\"mdl-data-table__cell--non-numeric\">합계</th>\r\n        <td colspan=\"2\" class=\"totalPrice\"></td>\r\n    </tr>\r\n    </tfoot>\r\n    <tbody>\r\n"
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.table : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "    </tbody>\r\n</table>";
 },"useData":true});
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10268,7 +10255,7 @@ return jQuery;
 
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Handlebars = __webpack_require__(2);
@@ -10278,7 +10265,7 @@ module.exports = (Handlebars["default"] || Handlebars).template({"compiler":[7,"
 },"useData":true});
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10300,7 +10287,7 @@ var base = _interopRequireWildcard(_handlebarsBase);
 // Each of these augment the Handlebars object. No need to setup here.
 // (This is done to easily share code between commonjs and browse envs)
 
-var _handlebarsSafeString = __webpack_require__(24);
+var _handlebarsSafeString = __webpack_require__(23);
 
 var _handlebarsSafeString2 = _interopRequireDefault(_handlebarsSafeString);
 
@@ -10312,11 +10299,11 @@ var _handlebarsUtils = __webpack_require__(0);
 
 var Utils = _interopRequireWildcard(_handlebarsUtils);
 
-var _handlebarsRuntime = __webpack_require__(23);
+var _handlebarsRuntime = __webpack_require__(22);
 
 var runtime = _interopRequireWildcard(_handlebarsRuntime);
 
-var _handlebarsNoConflict = __webpack_require__(22);
+var _handlebarsNoConflict = __webpack_require__(21);
 
 var _handlebarsNoConflict2 = _interopRequireDefault(_handlebarsNoConflict);
 
@@ -10351,7 +10338,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10363,7 +10350,7 @@ exports.registerDefaultDecorators = registerDefaultDecorators;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _decoratorsInline = __webpack_require__(12);
+var _decoratorsInline = __webpack_require__(11);
 
 var _decoratorsInline2 = _interopRequireDefault(_decoratorsInline);
 
@@ -10374,7 +10361,7 @@ function registerDefaultDecorators(instance) {
 
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10410,7 +10397,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10422,31 +10409,31 @@ exports.registerDefaultHelpers = registerDefaultHelpers;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _helpersBlockHelperMissing = __webpack_require__(14);
+var _helpersBlockHelperMissing = __webpack_require__(13);
 
 var _helpersBlockHelperMissing2 = _interopRequireDefault(_helpersBlockHelperMissing);
 
-var _helpersEach = __webpack_require__(15);
+var _helpersEach = __webpack_require__(14);
 
 var _helpersEach2 = _interopRequireDefault(_helpersEach);
 
-var _helpersHelperMissing = __webpack_require__(16);
+var _helpersHelperMissing = __webpack_require__(15);
 
 var _helpersHelperMissing2 = _interopRequireDefault(_helpersHelperMissing);
 
-var _helpersIf = __webpack_require__(17);
+var _helpersIf = __webpack_require__(16);
 
 var _helpersIf2 = _interopRequireDefault(_helpersIf);
 
-var _helpersLog = __webpack_require__(18);
+var _helpersLog = __webpack_require__(17);
 
 var _helpersLog2 = _interopRequireDefault(_helpersLog);
 
-var _helpersLookup = __webpack_require__(19);
+var _helpersLookup = __webpack_require__(18);
 
 var _helpersLookup2 = _interopRequireDefault(_helpersLookup);
 
-var _helpersWith = __webpack_require__(20);
+var _helpersWith = __webpack_require__(19);
 
 var _helpersWith2 = _interopRequireDefault(_helpersWith);
 
@@ -10463,7 +10450,7 @@ function registerDefaultHelpers(instance) {
 
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10509,7 +10496,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10610,7 +10597,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10642,7 +10629,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10678,7 +10665,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10711,7 +10698,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10730,7 +10717,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10770,7 +10757,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10824,7 +10811,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10849,10 +10836,10 @@ exports['default'] = function (Handlebars) {
 module.exports = exports['default'];
 //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2xpYi9oYW5kbGViYXJzL25vLWNvbmZsaWN0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O3FCQUNlLFVBQVMsVUFBVSxFQUFFOztBQUVsQyxNQUFJLElBQUksR0FBRyxPQUFPLE1BQU0sS0FBSyxXQUFXLEdBQUcsTUFBTSxHQUFHLE1BQU07TUFDdEQsV0FBVyxHQUFHLElBQUksQ0FBQyxVQUFVLENBQUM7O0FBRWxDLFlBQVUsQ0FBQyxVQUFVLEdBQUcsWUFBVztBQUNqQyxRQUFJLElBQUksQ0FBQyxVQUFVLEtBQUssVUFBVSxFQUFFO0FBQ2xDLFVBQUksQ0FBQyxVQUFVLEdBQUcsV0FBVyxDQUFDO0tBQy9CO0FBQ0QsV0FBTyxVQUFVLENBQUM7R0FDbkIsQ0FBQztDQUNIIiwiZmlsZSI6Im5vLWNvbmZsaWN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyogZ2xvYmFsIHdpbmRvdyAqL1xuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24oSGFuZGxlYmFycykge1xuICAvKiBpc3RhbmJ1bCBpZ25vcmUgbmV4dCAqL1xuICBsZXQgcm9vdCA9IHR5cGVvZiBnbG9iYWwgIT09ICd1bmRlZmluZWQnID8gZ2xvYmFsIDogd2luZG93LFxuICAgICAgJEhhbmRsZWJhcnMgPSByb290LkhhbmRsZWJhcnM7XG4gIC8qIGlzdGFuYnVsIGlnbm9yZSBuZXh0ICovXG4gIEhhbmRsZWJhcnMubm9Db25mbGljdCA9IGZ1bmN0aW9uKCkge1xuICAgIGlmIChyb290LkhhbmRsZWJhcnMgPT09IEhhbmRsZWJhcnMpIHtcbiAgICAgIHJvb3QuSGFuZGxlYmFycyA9ICRIYW5kbGViYXJzO1xuICAgIH1cbiAgICByZXR1cm4gSGFuZGxlYmFycztcbiAgfTtcbn1cbiJdfQ==
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11156,7 +11143,7 @@ function executeDecorators(fn, prog, container, depths, data, blockParams) {
 
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11178,7 +11165,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports) {
 
 var g;
@@ -11205,33 +11192,32 @@ module.exports = g;
 
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _list = __webpack_require__(5);
+var _list = __webpack_require__(4);
 
 var _list2 = _interopRequireDefault(_list);
 
-var _main = __webpack_require__(6);
+var _main = __webpack_require__(5);
 
 var _main2 = _interopRequireDefault(_main);
 
-var _table = __webpack_require__(7);
+var _table = __webpack_require__(6);
 
 var _table2 = _interopRequireDefault(_table);
 
-var _ajax = __webpack_require__(4);
-
-var _ajax2 = _interopRequireDefault(_ajax);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Created by Yeji Lee on 2017-02-12.
- */
+//import ajax from './ajax';
+
+//const tplMain = require('./main.hbs'); // require는 보통 jsp 만 읽음.
+var $ = __webpack_require__(7); /**
+                            * Created by Yeji Lee on 2017-02-12.
+                            */
 // 변수 선언
 // 이전
 //var a = 1;
@@ -11241,33 +11227,45 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //let a = 3; // 재할당이 가능.
 
 //const tplList = require('./list.hbs'); // require는 보통 jsp 만 읽음.
-var $ = __webpack_require__(8);
-//const tplMain = require('./main.hbs'); // require는 보통 jsp 만 읽음.
 
 
 $('#root').html((0, _main2.default)({}));
 
 var list = [{
-    href: 'http://www.naver.com',
-    name: 'naver'
+    href: '../../src/hw170219/hw1.html',
+    name: '과제 1'
 }, {
-    href: 'http://www.daum.net',
-    name: 'daum'
+    href: '../../src/hw170219/hw2.html',
+    name: '과제 2'
 }];
 
 $('[data-view="list"]').html((0, _list2.default)({
     list: list
 }));
-$('body').html((0, _list2.default)({
-    data: table
-}));
-$('button').click(function () {
+
+$(document).ready(function () {
     $.ajax({
-        url: './data.json',
+        url: '../data.json',
+        dataType: 'json',
         success: function success(data) {
-            $(this).appendTo(data);
+            var tableData = data.fruits;
+
+            $('.tableWrap').html((0, _table2.default)({
+                table: tableData
+            }));
+            $('.totalPrice').html(function () {
+                var totalPrice = 0;
+                for (var i in tableData) {
+                    totalPrice += tableData[i].price;
+                }
+                return totalPrice;
+            });
         }
     });
+});
+
+$('button').click(function () {
+    $('.tableWrap').toggleClass('on');
 });
 
 /***/ })

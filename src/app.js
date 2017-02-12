@@ -21,11 +21,11 @@ const $ = require('jquery');
 $('#root').html(tplMain({}));
 
 const list = [{
-    href : 'http://www.naver.com',
-    name : 'naver'
+    href : '../../src/hw170219/hw1.html',
+    name : '과제 1'
 },{
-    href : 'http://www.daum.net',
-    name : 'daum'
+    href : '../../src/hw170219/hw2.html',
+    name : '과제 2'
 }];
 
 $('[data-view="list"]').html(tplList({
@@ -34,7 +34,7 @@ $('[data-view="list"]').html(tplList({
 
 $(document).ready(function(){
     $.ajax({
-        url :  './data.json',
+        url :  '../data.json',
         dataType : 'json',
         success : function(data){
             let tableData = data.fruits;
